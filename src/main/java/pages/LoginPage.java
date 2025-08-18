@@ -17,6 +17,12 @@ public class LoginPage
 	@FindBy(xpath = "//input[@class='form-control']")WebElement username;
 	@FindBy(xpath = "//input[@type='password']")WebElement password;
 	@FindBy(xpath = "//button[@class='btn btn-dark btn-block']")WebElement signin;
+	@FindBy(xpath = "//p[text()='Dashboard']")WebElement dashboard;
+	@FindBy(xpath = "//div[@class='alert alert-danger alert-dismissible']")WebElement alert;
+	@FindBy(xpath = "//div[@class='alert alert-danger alert-dismissible']")WebElement alert2;
+	@FindBy(xpath = "//div[@class='alert alert-danger alert-dismissible']")WebElement alert3;
+	
+	
 	
 	public void enterUsername(String usernamefield, String passwordfield)
 	{
@@ -29,6 +35,29 @@ public class LoginPage
 	public void clickSignIn()
 	{
 		signin.click();
+	}
+	
+	public boolean isDashBoardIsDisplayed()
+	{
+		return dashboard.isDisplayed();
+	}
+	
+	public boolean isAlertIsDisplayed()
+	{
+		return alert.isDisplayed();
+	}
+	
+	public boolean isAlert2IsDisplayed()
+	
+	{
+		return alert2.isDisplayed();
+		
+	}
+	
+	public boolean IsAlert3IsDisplayed()
+	{
+		return alert3.isDisplayed();
+				
 	}
 
 }

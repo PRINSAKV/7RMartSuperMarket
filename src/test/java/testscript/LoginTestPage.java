@@ -1,5 +1,6 @@
 package testscript;
 
+import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -8,19 +9,24 @@ import com.beust.jcommander.Parameters;
 import pages.LoginPage;
 
 public class LoginTestPage extends TestBase {
-  @Test(dataProvider = "Scripts")
+  @Test
+  @org.testng.annotations.Parameters({"username","password"})
   public void verifyTheUserIsAbleToSigInWithCorrectUsernameAndCorrectPassword(String username, String password ) 
   {
 	  LoginPage pageinclass = new LoginPage(driver);
 	  pageinclass.enterUsername("admin","admin");
 	  pageinclass.clickSignIn();
+	  boolean isHomepageisloaded= pageinclass.isDashBoardIsDisplayed();
+	  Assert.assertTrue(isHomepageisloaded, "homepage is not loaded");
   }
-  @Test
+  @Test(dataProvider = "Scripts")
   public void verifyTheUserIsAbleToSIgnInWithIncorrectUsernameandCorrectPassword()
   {
 	  LoginPage pageinclass = new LoginPage(driver);
 	  pageinclass.enterUsername("flora","admin");
 	  pageinclass.clickSignIn();
+	  boolean isAlertMessageisDisplayed=pageinclass.isAlertIsDisplayed();
+	  Assert.assertTrue(isAlertMessageisDisplayed,"Alert message not displayed");
 	  
   }
   @Test
@@ -29,6 +35,9 @@ public class LoginTestPage extends TestBase {
 	  LoginPage pageinclass = new LoginPage(driver);
 	  pageinclass.enterUsername("admin","fona");
 	  pageinclass.clickSignIn();
+	  boolean isAlertMessageisDisplayed=pageinclass.isAlertIsDisplayed();
+	  Assert.assertTrue(isAlertMessageisDisplayed,"Alert message not displayed");
+	  
 	  
   }
   @Test
@@ -38,6 +47,8 @@ public class LoginTestPage extends TestBase {
 	  LoginPage pageinclass = new LoginPage(driver);
 	  pageinclass.enterUsername("flora","fona");
 	  pageinclass.clickSignIn();
+	  boolean isAlertMessageisDisplayed=pageinclass.isAlertIsDisplayed();
+	  Assert.assertTrue(isAlertMessageisDisplayed,"Alert message not displayed");
   }
   
   @DataProvider(name = "Scripts")
