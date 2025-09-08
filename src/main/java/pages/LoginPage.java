@@ -7,6 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage 
 {
+
 	public WebDriver driver;
 	public LoginPage (WebDriver driver)
 	{
@@ -24,17 +25,20 @@ public class LoginPage
 	
 	
 	
-	public void enterUsername(String usernamefield, String passwordfield)
+	public LoginPage enterUsername(String usernamefield, String passwordfield)
 	{
+		
 		username.sendKeys(usernamefield);
 		password.sendKeys(passwordfield);
+		return this;
 		
 		
 	}
 	
-	public void clickSignIn()
+	public HomePage clickSignIn()
 	{
 		signin.click();
+		return new HomePage(driver);// to give connection for home page and login page
 	}
 	
 	public boolean isDashBoardIsDisplayed()
@@ -59,5 +63,7 @@ public class LoginPage
 		return alert3.isDisplayed();
 				
 	}
+
+	
 
 }
