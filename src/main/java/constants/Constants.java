@@ -15,6 +15,7 @@ public class Constants {
 	public static final String ERRORMESSAGEFORSEARCHATCATEGORY = "not visible";
 	public static final String ERRORMESSAGEFOREDITBUTTONATFOOTERPAGE = "not displayed";
 	public static final String ERRORMESSAGEFORRESTTBUTTONATMANAGEPRODUCTPAGE="not displayed";
+	public static final String ERRORMESSAGEFORACTIONBUTTONATMANAGECONTACTSPAGE = "not visible";
 	
 	public static final String FILEPATH = System.getProperty("user.dir")+"//src/main//resources//Testdata.xlsx";
 	public static final String IMAGEPATH = System.getProperty("user.dir")+"//src//main//resources//b.jpg";

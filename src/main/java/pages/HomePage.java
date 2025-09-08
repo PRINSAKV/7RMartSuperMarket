@@ -66,4 +66,11 @@ public class HomePage {
 		managefootermoreinfo.click();
 		return new ManageFooterPage(driver);
 	}
+	@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/list-contact']")WebElement managemoreInfo;
+	public  ManageContactsPage clickMoreInfoAtManageContacts()
+	{
+		managemoreInfo.click();
+		return new ManageContactsPage(driver);
+	}
+	
 }
