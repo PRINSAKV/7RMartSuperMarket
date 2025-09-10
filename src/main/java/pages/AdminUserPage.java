@@ -17,11 +17,14 @@ import utilities.WaitUtility;
 public class AdminUserPage {
 	
 	public WebDriver driver;
+	PageUtility utility;
 
 	public AdminUserPage(WebDriver driver)
 	{
 		this.driver= driver;
 		PageFactory.initElements(driver, this);
+		utility = new PageUtility(driver);
+		
 	}
 	@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/list-admin'and@class='small-box-footer']")WebElement adminuser;
 	@FindBy(xpath = "//a[@onclick='click_button(1)']")WebElement newbutton;
@@ -53,10 +56,10 @@ public class AdminUserPage {
 		return this;
 	}
 	
-	public AdminUserPage userType()
+	public AdminUserPage userType(String usertype)
 	{
-		Select select = new Select(adminusertype);
-		select.selectByIndex(2);
+		adminusertype.click();
+		utility.selectByVisibleText(adminusertype, usertype);
 		return this;
 	}
 		

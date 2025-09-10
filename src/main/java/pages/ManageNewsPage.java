@@ -33,7 +33,7 @@ public class ManageNewsPage {
 	public ManageNewsPage printNews(String string)
 	{
 		//driver.navigate().to("https://groceryapp.uniqassosiates.com/admin/news/add");
-		enterNews.sendKeys("The power of unity");
+		enterNews.sendKeys(string);
 		return this;
 	}
 	

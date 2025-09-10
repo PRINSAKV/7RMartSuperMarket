@@ -10,7 +10,7 @@
 	<test name="chrometest" thread-count="5">
 		
 		<classes>
-			<class name="testscript.ManageNewsTest"></class>
+			<class name="testscript.LoginTestPage"></class>
 		</classes>
 	</test>
 	

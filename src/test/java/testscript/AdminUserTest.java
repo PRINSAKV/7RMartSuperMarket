@@ -30,7 +30,7 @@ public class AdminUserTest extends TestBase {
 	   //String adminname = faker.getFakeCityName();
 	 // String adminpass = faker.getPassword();
 	  adminuserpage.clickNewbutton().enterUsername(ExcelUtility.getStringData(1, 0, "Adminusertest"))
-	  .enterPasword(ExcelUtility.getStringData(1, 1, "Adminusertest")).userType().clickSave();
+	  .enterPasword(ExcelUtility.getStringData(1, 1, "Adminusertest")).userType(ExcelUtility.getStringData(1, 2, "Adminusertest")).clickSave();
 	  
 	    /* AdminUserPage adminpage= new AdminUserPage(driver);
 	  adminpage.clickAdminUserMoreInfo();

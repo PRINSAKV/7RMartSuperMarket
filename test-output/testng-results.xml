@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="5" passed="4" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-08T11:38:57 IST" name="Suite" finished-at="2025-09-08T11:39:03 IST" duration-ms="6008">
+  <suite started-at="2025-09-10T13:23:11 IST" name="Suite" finished-at="2025-09-10T13:23:37 IST" duration-ms="26435">
     <groups>
+      <group name="smoke test">
+        <method signature="LoginTestPage.verifyTheUserIsAbleToSigInWithCorrectUsernameAndCorrectPassword(java.lang.String,java.lang.String)[pri:0, instance:testscript.LoginTestPage@465232e9]" name="verifyTheUserIsAbleToSigInWithCorrectUsernameAndCorrectPassword" class="testscript.LoginTestPage"/>
+        <method signature="LoginTestPage.verifyTheUserIsAbleToSignInWithINcorrectPasswordandCorrectUsername()[pri:0, instance:testscript.LoginTestPage@465232e9]" name="verifyTheUserIsAbleToSignInWithINcorrectPasswordandCorrectUsername" class="testscript.LoginTestPage"/>
+      </group> <!-- smoke test -->
     </groups>
-    <test started-at="2025-09-08T11:38:57 IST" name="chrometest" finished-at="2025-09-08T11:39:03 IST" duration-ms="6008">
-      <class name="testscript.ManageNewsTest">
-        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:testscript.ManageNewsTest@12591ac8]" started-at="2025-09-08T11:38:57 IST" name="beforeMethod" finished-at="2025-09-08T11:39:00 IST" duration-ms="3029" status="PASS">
+    <test started-at="2025-09-10T13:23:11 IST" name="chrometest" finished-at="2025-09-10T13:23:37 IST" duration-ms="26435">
+      <class name="testscript.LoginTestPage">
+        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:testscript.LoginTestPage@465232e9]" started-at="2025-09-10T13:23:11 IST" name="beforeMethod" finished-at="2025-09-10T13:23:22 IST" duration-ms="10526" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,11 +22,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="verifyTheUserIsAbleToClickManageNewsandPrintNews(java.lang.String,java.lang.String)[pri:0, instance:testscript.ManageNewsTest@12591ac8]" started-at="2025-09-08T11:39:00 IST" name="verifyTheUserIsAbleToClickManageNewsandPrintNews" finished-at="2025-09-08T11:39:02 IST" duration-ms="2762" status="FAIL">
+        <test-method signature="verifyTheUserIsAbleToSIgnInWithIncorrectUsernameandCorrectPassword(java.lang.String,java.lang.String)[pri:0, instance:testscript.LoginTestPage@465232e9]" started-at="2025-09-10T13:23:22 IST" name="verifyTheUserIsAbleToSIgnInWithIncorrectUsernameandCorrectPassword" data-provider="Scripts" finished-at="2025-09-10T13:23:23 IST" duration-ms="954" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[admin123]]>
+                <![CDATA[admin]]>
               </value>
             </param>
             <param index="1">
@@ -31,16 +35,49 @@
               </value>
             </param>
           </params>
-          <exception class="java.lang.IllegalStateException">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[Cannot get a NUMERIC value from a STRING cell]]>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='alert alert-danger alert-dismissible']"}
+  (Session info: chrome=140.0.7339.80)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.33.0', revision: '2c6aaad03a'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f274150e067d854e9e56b1e12b5a36b0, findElement {using=xpath, value=//div[@class='alert alert-danger alert-dismissible']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.80, chrome: {chromedriverVersion: 140.0.7339.82 (bc93617e21c3..., userDataDir: C:\Users\akhil\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65368}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65368/devtoo..., se:cdpVersion: 140.0.7339.80, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f274150e067d854e9e56b1e12b5a36b0]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: Cannot get a NUMERIC value from a STRING cell
-at org.apache.poi.xssf.usermodel.XSSFCell.typeMismatch(XSSFCell.java:987)
-at org.apache.poi.xssf.usermodel.XSSFCell.getNumericCellValue(XSSFCell.java:260)
-at utilities.ExcelUtility.getIntegerData(ExcelUtility.java:34)
-at testscript.ManageNewsTest.verifyTheUserIsAbleToClickManageNewsandPrintNews(ManageNewsTest.java:26)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='alert alert-danger alert-dismissible']"}
+  (Session info: chrome=140.0.7339.80)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.33.0', revision: '2c6aaad03a'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f274150e067d854e9e56b1e12b5a36b0, findElement {using=xpath, value=//div[@class='alert alert-danger alert-dismissible']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.80, chrome: {chromedriverVersion: 140.0.7339.82 (bc93617e21c3..., userDataDir: C:\Users\akhil\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65368}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65368/devtoo..., se:cdpVersion: 140.0.7339.80, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f274150e067d854e9e56b1e12b5a36b0
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy16.isDisplayed(Unknown Source)
+at pages.LoginPage.isAlertIsDisplayed(LoginPage.java:51)
+at testscript.LoginTestPage.verifyTheUserIsAbleToSIgnInWithIncorrectUsernameandCorrectPassword(LoginTestPage.java:35)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -71,22 +108,150 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IllegalStateException -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyTheUserIsAbleToClickManageNewsandPrintNews -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testscript.ManageNewsTest@12591ac8]" started-at="2025-09-08T11:39:02 IST" name="afterMethod" finished-at="2025-09-08T11:39:03 IST" duration-ms="122" status="PASS">
+        </test-method> <!-- verifyTheUserIsAbleToSIgnInWithIncorrectUsernameandCorrectPassword -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testscript.LoginTestPage@465232e9]" started-at="2025-09-10T13:23:23 IST" name="afterMethod" finished-at="2025-09-10T13:23:23 IST" duration-ms="122" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyTheUserIsAbleToClickManageNewsandPrintNews status=FAILURE method=ManageNewsTest.verifyTheUserIsAbleToClickManageNewsandPrintNews(java.lang.String,java.lang.String)[pri:0, instance:testscript.ManageNewsTest@12591ac8] output={null}]]]>
+                <![CDATA[[TestResult name=verifyTheUserIsAbleToSIgnInWithIncorrectUsernameandCorrectPassword status=FAILURE method=LoginTestPage.verifyTheUserIsAbleToSIgnInWithIncorrectUsernameandCorrectPassword(java.lang.String,java.lang.String)[pri:0, instance:testscript.LoginTestPage@465232e9] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- testscript.ManageNewsTest -->
+        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:testscript.LoginTestPage@465232e9]" started-at="2025-09-10T13:23:23 IST" name="beforeMethod" finished-at="2025-09-10T13:23:24 IST" duration-ms="1684" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="verifyTheUserIsAbleToSIgnInWithIncorrectUsernameandCorrectPassword(java.lang.String,java.lang.String)[pri:0, instance:testscript.LoginTestPage@465232e9]" started-at="2025-09-10T13:23:24 IST" name="verifyTheUserIsAbleToSIgnInWithIncorrectUsernameandCorrectPassword" data-provider="Scripts" finished-at="2025-09-10T13:23:25 IST" duration-ms="778" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[flora]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[fona]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTheUserIsAbleToSIgnInWithIncorrectUsernameandCorrectPassword -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testscript.LoginTestPage@465232e9]" started-at="2025-09-10T13:23:25 IST" name="afterMethod" finished-at="2025-09-10T13:23:25 IST" duration-ms="5" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyTheUserIsAbleToSIgnInWithIncorrectUsernameandCorrectPassword status=SUCCESS method=LoginTestPage.verifyTheUserIsAbleToSIgnInWithIncorrectUsernameandCorrectPassword(java.lang.String,java.lang.String)[pri:0, instance:testscript.LoginTestPage@465232e9] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:testscript.LoginTestPage@465232e9]" started-at="2025-09-10T13:23:25 IST" name="beforeMethod" finished-at="2025-09-10T13:23:27 IST" duration-ms="2188" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="verifyTheUserIsAbleToSigInWithCorrectUsernameAndCorrectPassword(java.lang.String,java.lang.String)[pri:0, instance:testscript.LoginTestPage@465232e9]" started-at="2025-09-10T13:23:27 IST" name="verifyTheUserIsAbleToSigInWithCorrectUsernameAndCorrectPassword" finished-at="2025-09-10T13:23:28 IST" duration-ms="916" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTheUserIsAbleToSigInWithCorrectUsernameAndCorrectPassword -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testscript.LoginTestPage@465232e9]" started-at="2025-09-10T13:23:28 IST" name="afterMethod" finished-at="2025-09-10T13:23:28 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyTheUserIsAbleToSigInWithCorrectUsernameAndCorrectPassword status=SUCCESS method=LoginTestPage.verifyTheUserIsAbleToSigInWithCorrectUsernameAndCorrectPassword(java.lang.String,java.lang.String)[pri:0, instance:testscript.LoginTestPage@465232e9] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:testscript.LoginTestPage@465232e9]" started-at="2025-09-10T13:23:28 IST" name="beforeMethod" finished-at="2025-09-10T13:23:30 IST" duration-ms="2152" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="verifyTheUserIsAbleToSignInWithINcorrectPasswordandCorrectUsername()[pri:0, instance:testscript.LoginTestPage@465232e9]" started-at="2025-09-10T13:23:30 IST" name="verifyTheUserIsAbleToSignInWithINcorrectPasswordandCorrectUsername" finished-at="2025-09-10T13:23:34 IST" duration-ms="3921" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTheUserIsAbleToSignInWithINcorrectPasswordandCorrectUsername -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testscript.LoginTestPage@465232e9]" started-at="2025-09-10T13:23:34 IST" name="afterMethod" finished-at="2025-09-10T13:23:34 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyTheUserIsAbleToSignInWithINcorrectPasswordandCorrectUsername status=SUCCESS method=LoginTestPage.verifyTheUserIsAbleToSignInWithINcorrectPasswordandCorrectUsername()[pri:0, instance:testscript.LoginTestPage@465232e9] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:testscript.LoginTestPage@465232e9]" started-at="2025-09-10T13:23:34 IST" name="beforeMethod" finished-at="2025-09-10T13:23:37 IST" duration-ms="2416" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="verifyTheUserIsAbleToSignInWithInCorrectUsernameandPassword()[pri:0, instance:testscript.LoginTestPage@465232e9]" started-at="2025-09-10T13:23:37 IST" name="verifyTheUserIsAbleToSignInWithInCorrectUsernameandPassword" finished-at="2025-09-10T13:23:37 IST" duration-ms="673" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTheUserIsAbleToSignInWithInCorrectUsernameandPassword -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testscript.LoginTestPage@465232e9]" started-at="2025-09-10T13:23:37 IST" name="afterMethod" finished-at="2025-09-10T13:23:37 IST" duration-ms="8" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyTheUserIsAbleToSignInWithInCorrectUsernameandPassword status=SUCCESS method=LoginTestPage.verifyTheUserIsAbleToSignInWithInCorrectUsernameandPassword()[pri:0, instance:testscript.LoginTestPage@465232e9] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- testscript.LoginTestPage -->
     </test> <!-- chrometest -->
   </suite> <!-- Suite -->
 </testng-results>

@@ -9,16 +9,40 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">chrometest</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">6,008</td><td></td><td></td></tr>
+<tr><td><a href="#t0">chrometest</a></td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">26,435</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">chrometest &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">testscript.ManageNewsTest</td><td><a href="#m0">verifyTheUserIsAbleToClickManageNewsandPrintNews</a></td><td rowspan="1">1757311740195</td><td rowspan="1">2762</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">chrometest &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">testscript.LoginTestPage</td><td><a href="#m0">verifyTheUserIsAbleToSIgnInWithIncorrectUsernameandCorrectPassword</a></td><td rowspan="1">1757490802076</td><td rowspan="1">954</td></tr><tr><th colspan="4">chrometest &#8212; passed</th></tr><tr class="passedeven"><td rowspan="4">testscript.LoginTestPage</td><td><a href="#m1">verifyTheUserIsAbleToSIgnInWithIncorrectUsernameandCorrectPassword</a></td><td rowspan="1">1757490804847</td><td rowspan="1">778</td></tr><tr class="passedeven"><td><a href="#m2">verifyTheUserIsAbleToSigInWithCorrectUsernameAndCorrectPassword</a></td><td rowspan="1">1757490807833</td><td rowspan="1">916</td></tr><tr class="passedeven"><td><a href="#m3">verifyTheUserIsAbleToSignInWithINcorrectPasswordandCorrectUsername</a></td><td rowspan="1">1757490810919</td><td rowspan="1">3921</td></tr><tr class="passedeven"><td><a href="#m4">verifyTheUserIsAbleToSignInWithInCorrectUsernameandPassword</a></td><td rowspan="1">1757490817260</td><td rowspan="1">673</td></tr></tbody>
 </table>
-<h2>chrometest</h2><h3 id="m0">testscript.ManageNewsTest#verifyTheUserIsAbleToClickManageNewsandPrintNews</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>admin123</td><td>admin</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.IllegalStateException: Cannot get a NUMERIC value from a STRING cell
-	at org.apache.poi.xssf.usermodel.XSSFCell.typeMismatch(XSSFCell.java:987)
-	at org.apache.poi.xssf.usermodel.XSSFCell.getNumericCellValue(XSSFCell.java:260)
-	at utilities.ExcelUtility.getIntegerData(ExcelUtility.java:34)
-	at testscript.ManageNewsTest.verifyTheUserIsAbleToClickManageNewsandPrintNews(ManageNewsTest.java:26)
+<h2>chrometest</h2><h3 id="m0">testscript.LoginTestPage#verifyTheUserIsAbleToSIgnInWithIncorrectUsernameandCorrectPassword</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>admin</td><td>admin</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;alert alert-danger alert-dismissible&apos;]&quot;}
+  (Session info: chrome=140.0.7339.80)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.33.0&apos;, revision: &apos;2c6aaad03a&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f274150e067d854e9e56b1e12b5a36b0, findElement {using=xpath, value=//div[@class=&apos;alert alert-danger alert-dismissible&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.80, chrome: {chromedriverVersion: 140.0.7339.82 (bc93617e21c3..., userDataDir: C:\Users\akhil\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65368}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65368/devtoo..., se:cdpVersion: 140.0.7339.80, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f274150e067d854e9e56b1e12b5a36b0
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy16.isDisplayed(Unknown Source)
+	at pages.LoginPage.isAlertIsDisplayed(LoginPage.java:51)
+	at testscript.LoginTestPage.verifyTheUserIsAbleToSIgnInWithIncorrectUsernameandCorrectPassword(LoginTestPage.java:35)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">testscript.LoginTestPage#verifyTheUserIsAbleToSIgnInWithIncorrectUsernameandCorrectPassword</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>flora</td><td>fona</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">testscript.LoginTestPage#verifyTheUserIsAbleToSigInWithCorrectUsernameAndCorrectPassword</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>admin</td><td>admin</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">testscript.LoginTestPage#verifyTheUserIsAbleToSignInWithINcorrectPasswordandCorrectUsername</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">testscript.LoginTestPage#verifyTheUserIsAbleToSignInWithInCorrectUsernameandPassword</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
