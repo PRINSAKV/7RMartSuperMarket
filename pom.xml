@@ -54,11 +54,7 @@
 			<artifactId>lombok</artifactId>
 			<version>1.18.22</version>
 		</dependency>
-  	<dependency>
-  		<groupId>com.obsqura</groupId>
-  		<artifactId>Automationtesting</artifactId>
-  		<version>0.0.1-SNAPSHOT</version>
-  	</dependency>
+  	
   </dependencies>
   <build>
 		<plugins>
